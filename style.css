@@ -26,6 +26,20 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Header container centers the logo and title */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Size the logo so it doesn’t overwhelm the header */
+.logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
 .progress {
   margin-bottom: 20px;
   font-weight: bold;
@@ -54,7 +68,9 @@ h1 {
 }
 
 .option img {
-  max-width: 100%;
+  /* Reduce the size of answer choice images so they fit better on smaller screens.
+     Setting a fixed width prevents long vertical scrolling. */
+  width: 120px;
   height: auto;
   display: block;
   margin: 0 auto 10px;

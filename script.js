@@ -706,7 +706,16 @@ function selectOption(selectedIndex) {
   });
   // Show explanation
   const feedback = document.querySelector('.feedback');
-  feedback.textContent = questionObj.explanation;
+  /*
+   * Insert the explanation as HTML so we can append a link to the
+   * Skool community.  By using innerHTML, the explanatory text
+   * can contain markup.  We concatenate a call‑to‑action inviting
+   * students to visit the community for further questions.
+   */
+  feedback.innerHTML = `${questionObj.explanation}
+    <br><br>
+    If you have any more questions, please ask them in the Community tab of our Skool community: 
+    <a href="https://www.skool.com/premedportal" target="_blank">Community</a>.`;
   feedback.style.display = 'block';
   // Reveal next button
   const nextBtn = document.querySelector('.next-button');
