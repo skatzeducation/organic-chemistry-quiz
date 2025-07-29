@@ -17,25 +17,617 @@ imageData['iso-butyl iodide'] = 'iso_butyl_iodide.png';
 imageData['n-butyl iodide']   = 'n_butyl_iodide.png';
 imageData['sec-butyl iodide'] = 'sec_butyl_iodide.png';
 
+// Additional images for new quiz questions
+imageData['1-chlorobutane']    = '1_chlorobutane.png';
+imageData['2-chlorobutane']    = '2_chlorobutane.png';
+imageData['isopropyl chloride'] = 'isopropyl_chloride.png';
+imageData['tert-butyl chloride'] = 'tert_butyl_chloride.png';
+imageData['propyl bromide']     = 'propyl_bromide.png';
+imageData['allyl bromide']      = 'allyl_bromide.png';
+imageData['water']              = 'water.png';
+imageData['hydrogen sulfide']   = 'hydrogen_sulfide.png';
+imageData['thiolate']           = 'thiolate.png';
+imageData['hydroxide']          = 'hydroxide.png';
+imageData['dmf']                = 'DMF.png';
+imageData['dmso']               = 'DMSO.png';
+imageData['acetonitrile']       = 'acetonitrile.png';
+
+// Additional mappings for newly generated structures
+imageData['2-bromopropane']      = '2_bromopropane.png';
+imageData['tert-butyl bromide']  = 'tert_butyl_bromide.png';
+imageData['H₂S']                 = 'H2S.png';
+imageData['methoxide']           = 'CH3O_minus.png';
+imageData['acetate']             = 'acetate.png';
+imageData['methanol']            = 'methanol.png';
+imageData['ammonia']             = 'ammonia.png';
+imageData['isobutyl alcohol']    = 'isobutyl_alcohol.png';
+imageData['2-butanol']           = '2_butanol.png';
+imageData['tert-butyl cation']   = 'tert_butyl_cation.png';
+imageData['isopropyl cation']    = 'isopropyl_cation.png';
+imageData['ethyl cation']        = 'ethyl_cation.png';
+imageData['allylic cation']      = 'allylic_cation.png';
+imageData['chloromethylcyclohexane'] = 'chloromethylcyclohexane.png';
+imageData['benzyl chloride']     = 'benzyl_chloride.png';
+imageData['neopentyl chloride']  = 'neopentyl_chloride.png';
+imageData['2-bromobutane']       = '2_bromobutane.png';
+imageData['3-methyl-2-butanol']  = '3_methyl_2_butanol.png';
+imageData['2-bromopentane']      = '2_bromopentane.png';
+imageData['propanol']            = 'propanol.png';
+imageData['propanethiol']        = 'propanethiol.png';
+imageData['tert-butyl ethyl ether'] = 'tert_butyl_ethyl_ether.png';
+imageData['propionic acid']      = 'propionic_acid.png';
+imageData['ethyl bromide']       = 'ethyl_bromide.png';
+imageData['ethyl acetate']       = 'ethyl_acetate.png';
+imageData['3-bromo-3-methylhexane'] = '3_bromo_3_methylhexane.png';
+imageData['benzyl bromide']      = 'benzyl_bromide.png';
+imageData['ethyl acetate']       = 'ethyl_acetate.png';
+
+// Mappings for additional structures referenced in the quiz
+imageData['tert-butanol']        = 'tert_butanol.png';
+imageData['acetic acid']         = 'acetic_acid.png';
+imageData['propyl chloride']     = 'propyl_chloride.png';
+imageData['ethene']              = 'ethene.png';
+imageData['1-bromobutane']       = '1_bromobutane.png';
+imageData['allyl chloride']      = 'allyl_chloride.png';
+imageData['neopentyl bromide']   = 'neopentyl_bromide.png';
+imageData['product_S_2_butanenitrile'] = 'product_S_2_butanenitrile.png';
+imageData['product_R_2_butanenitrile'] = 'product_R_2_butanenitrile.png';
+imageData['racemic_butanenitrile']     = 'racemic_butanenitrile.png';
+imageData['cyclohexanol']       = 'cyclohexanol.png';
+
+
 // Quiz data containing one question for demonstration. Additional questions can
 // easily be added to this array following the same structure.
 const questions = [
+  // 1. Recognizing tert‑butyl iodide among its isomers
   {
-    text: 'Which is the most reactive isomer of C₄H₉I toward an SN2 reaction?',
+    text: 'Which structure is tert‑butyl iodide?',
     options: [
-      { label: 'tert-butyl iodide', imageKey: 'tert-butyl iodide', correct: false },
-      { label: 'iso-butyl iodide', imageKey: 'iso-butyl iodide', correct: false },
-      { label: 'n-butyl iodide', imageKey: 'n-butyl iodide', correct: true },
-      { label: 'sec-butyl iodide', imageKey: 'sec-butyl iodide', correct: false },
+      { label: 'iso‑butyl iodide', imageKey: 'iso-butyl iodide', correct: false },
+      { label: 'sec‑butyl iodide', imageKey: 'sec-butyl iodide', correct: false },
+      { label: 'tert‑butyl iodide', imageKey: 'tert-butyl iodide', correct: true },
+      { label: 'n‑butyl iodide', imageKey: 'n-butyl iodide', correct: false },
     ],
-    // Detailed explanation written at a simple reading level. This
-    // explanation helps students understand why the primary isomer is
-    // most reactive in an SN2 reaction.
-    explanation:
-      'In an SN2 reaction, the nucleophile attacks the carbon that is attached to the leaving group. It needs enough space to approach from the opposite side. When the carbon is only attached to one other carbon (a primary carbon), there is plenty of room for the attack.\n' +
-      'N‑butyl iodide has the iodine atom on a primary carbon, while iso‑butyl and sec‑butyl iodides have more crowded secondary carbons. Tert‑butyl iodide is even more crowded, with the iodine on a tertiary carbon.\n' +
-      'Because steric hindrance slows down SN2 reactions, the less crowded n‑butyl iodide allows the nucleophile to attack more easily.\n' +
-      'That is why n‑butyl iodide is the most reactive isomer toward an SN2 reaction, and tert‑butyl iodide is the least reactive.'
+    explanation: 'Tert‑butyl iodide has the iodine on a carbon that is attached to three other carbons.  The structure looks like a central carbon with three methyl groups around it and the iodine attached to the center.  The other isomers have iodine on primary or secondary carbons.  Only the tert‑butyl structure shows a carbon bonded to three carbons.  That makes Option 3 the correct choice.'
+  },
+  // 2. SN2 reactivity of C4H9I isomers
+  {
+    text: 'For the four isomers of C₄H₉I (n‑butyl, sec‑butyl, iso‑butyl and tert‑butyl iodide), which is most reactive toward an SN2 reaction?',
+    options: [
+      { label: 'tert‑butyl iodide', imageKey: 'tert-butyl iodide', correct: false },
+      { label: 'iso‑butyl iodide', imageKey: 'iso-butyl iodide', correct: false },
+      { label: 'n‑butyl iodide', imageKey: 'n-butyl iodide', correct: true },
+      { label: 'sec‑butyl iodide', imageKey: 'sec-butyl iodide', correct: false },
+    ],
+    explanation: 'SN2 reactions occur fastest when the leaving group is on a carbon with as little crowding as possible.  A primary carbon has more open space than a secondary or tertiary carbon.  In n‑butyl iodide, the iodine is on a primary carbon, so the nucleophile can easily approach from the back side.  Sec‑butyl and iso‑butyl iodides are secondary, and tert‑butyl iodide is tertiary and very crowded.  Therefore n‑butyl iodide reacts fastest.'
+  },
+  // 3. Comparing primary and secondary alkyl chlorides in SN2 reactions
+  {
+    text: 'Which of the following primary or secondary alkyl halides will react fastest in an SN2 reaction?',
+    options: [
+      { label: '1‑chlorobutane', imageKey: '1-chlorobutane', correct: true },
+      { label: '2‑chlorobutane', imageKey: '2-chlorobutane', correct: false },
+      { label: 'isopropyl chloride', imageKey: 'isopropyl chloride', correct: false },
+      { label: 'tert‑butyl chloride', imageKey: 'tert-butyl chloride', correct: false },
+    ],
+    explanation: 'SN2 reactions favor primary substrates.  1‑Chlorobutane has its chlorine on a primary carbon, so the nucleophile has the most room to attack.  The secondary chlorides (2‑chlorobutane and isopropyl chloride) are more hindered and react more slowly.  Tert‑butyl chloride is tertiary and essentially unreactive toward SN2.  Therefore 1‑chlorobutane reacts fastest.'
+  },
+  // 4. Allylic vs. propyl bromide reactivity in SN2
+  {
+    text: 'In the pair allyl bromide vs. propyl bromide, which reacts faster in an SN2 reaction?',
+    options: [
+      { label: 'propyl bromide', imageKey: 'propyl bromide', correct: false },
+      { label: 'allyl bromide', imageKey: 'allyl bromide', correct: true },
+      { label: '2‑bromopropane', imageKey: '2-bromopropane', correct: false },
+      { label: 'tert‑butyl bromide', imageKey: 'tert-butyl bromide', correct: false },
+    ],
+    explanation: 'Allyl bromide has the leaving group next to a double bond, allowing resonance to stabilize the transition state during the SN2 reaction.  This allylic stabilization makes the reaction faster than for a simple primary halide.  Propyl bromide is primary but lacks this resonance.  Secondary and tertiary bromides are more hindered.  Thus allyl bromide reacts the fastest.'
+  },
+  // 5. Nucleophile strength in polar aprotic solvent
+  {
+    text: 'Which nucleophile is strongest in a polar aprotic solvent like DMSO?',
+    options: [
+      { label: 'H₂O', imageKey: 'water', correct: false },
+      { label: 'H₂S', imageKey: 'hydrogen sulfide', correct: false },
+      { label: 'HS⁻', imageKey: 'thiolate', correct: true },
+      { label: 'HO⁻', imageKey: 'hydroxide', correct: false },
+    ],
+    explanation: 'In polar aprotic solvents such as DMSO, anions are not strongly solvated, so larger, more polarizable anions are better nucleophiles.  The HS⁻ ion is larger and more polarizable than HO⁻ and is not hydrogen‑bonded as strongly.  Neutral molecules like H₂O and H₂S are very weak nucleophiles.  Thus HS⁻ is the strongest nucleophile in this environment.'
+  },
+  // 6. Effect of solvent on methoxide nucleophilicity
+  {
+    text: 'Compare the nucleophiles methoxide in methanol vs. methoxide in DMSO.  Which is stronger for SN2 reactions?',
+    options: [
+      { label: 'Methoxide in methanol', imageKey: 'methoxide', correct: false },
+      { label: 'Methoxide in DMSO', imageKey: 'methoxide', correct: true },
+      { label: 'Hydroxide in water', imageKey: 'hydroxide', correct: false },
+      { label: 'Acetate ion', imageKey: 'acetate', correct: false },
+    ],
+    explanation: 'In a protic solvent like methanol, methoxide ions are surrounded by hydrogen bonds that slow them down.  In a polar aprotic solvent like DMSO, hydrogen bonding to the nucleophile is minimal, so methoxide ions are more “free” and can attack more quickly.  Hydroxide in water is also heavily solvated and therefore slower.  Acetate is resonance‑stabilized and weaker as a nucleophile.  Thus methoxide in DMSO is the strongest nucleophile of these choices.'
+  },
+  // 7. Identifying a protic solvent
+  {
+    text: 'Which of the following solvents is protic (able to donate a hydrogen bond)?',
+    options: [
+      { label: 'Dimethylformamide (DMF)', imageKey: 'dmf', correct: false },
+      { label: 'Dimethyl sulfoxide (DMSO)', imageKey: 'dmso', correct: false },
+      { label: 'Water', imageKey: 'water', correct: true },
+      { label: 'Acetonitrile', imageKey: 'acetonitrile', correct: false },
+    ],
+    explanation: 'A protic solvent must have a hydrogen attached to an electronegative atom such as oxygen or nitrogen so that it can form hydrogen bonds.  Water has O–H bonds and readily donates hydrogen bonds.  DMF and DMSO lack O–H or N–H bonds on their heteroatoms, and acetonitrile has only C–H bonds, making these solvents aprotic.  Therefore, water is the protic solvent among the options.'
+  },
+  // 8. Choosing an aprotic solvent for SN2 reactions
+  {
+    text: 'Which solvent is aprotic and suitable for SN2 reactions?',
+    options: [
+      { label: 'DMSO', imageKey: 'dmso', correct: true },
+      { label: 'Water', imageKey: 'water', correct: false },
+      { label: 'Methanol', imageKey: 'methanol', correct: false },
+      { label: 'Tert‑butanol', imageKey: 'tert-butanol', correct: false },
+    ],
+    explanation: 'Polar aprotic solvents stabilize ions without hydrogen‑bonding to the nucleophile.  DMSO is a classic polar aprotic solvent that allows nucleophiles to remain reactive.  Water, methanol and tert‑butanol all have O–H bonds and hydrogen‑bond strongly to anions, making them protic and less suitable for SN2.  Thus DMSO is the best choice for SN2 reactions.'
+  },
+  // 9. Effect of doubling substrate concentration in an SN2 reaction
+  {
+    text: 'In the reaction CH₃CH₂Br + NaCN → CH₃CH₂CN + NaBr (in DMSO), the concentration of the alkyl halide is doubled while everything else is constant.  How is the rate of this SN2 reaction affected?',
+    options: [
+      { label: 'Rate stays the same', imageKey: 'ethyl bromide', correct: false },
+      { label: 'Rate doubles', imageKey: 'ethyl bromide', correct: true },
+      { label: 'Rate triples', imageKey: 'ethyl bromide', correct: false },
+      { label: 'Rate halves', imageKey: 'ethyl bromide', correct: false },
+    ],
+    explanation: 'For SN2 reactions, the rate is proportional to the product of the concentrations of the substrate and the nucleophile.  This means it is first‑order in each reactant.  If the concentration of the alkyl halide is doubled while the nucleophile concentration stays the same, the rate will double.  Tripling or halving the rate would require other changes.  So the correct answer is that the rate doubles.'
+  },
+  // 10. Effect of doubling nucleophile concentration in an SN2 reaction
+  {
+    text: 'For the same SN2 reaction (CH₃CH₂Br + NaCN in DMSO), if the concentration of sodium cyanide is doubled while the alkyl halide concentration is constant, what happens to the rate?',
+    options: [
+      { label: 'Rate stays the same', imageKey: 'ethyl bromide', correct: false },
+      { label: 'Rate doubles', imageKey: 'ethyl bromide', correct: true },
+      { label: 'Rate triples', imageKey: 'ethyl bromide', correct: false },
+      { label: 'Rate halves', imageKey: 'ethyl bromide', correct: false },
+    ],
+    explanation: 'The SN2 rate law is first‑order in both the substrate and the nucleophile.  If you double the concentration of sodium cyanide while keeping the alkyl halide constant, the rate also doubles.  The reaction rate is proportional to the nucleophile concentration, so increasing NaCN speeds up the reaction by the same factor.'
+  },
+  // 11. Doubling alcohol concentration in an SN1 reaction
+  {
+    text: 'Consider the reaction (CH₃)₂CHCH₂OH + HBr → (CH₃)₂CHCH₂Br + H₂O.  If the concentration of the alcohol is doubled, how is the rate of this SN1 reaction affected?',
+    options: [
+      { label: 'Rate stays the same', imageKey: 'isobutyl alcohol', correct: false },
+      { label: 'Rate doubles', imageKey: 'isobutyl alcohol', correct: true },
+      { label: 'Rate triples', imageKey: 'isobutyl alcohol', correct: false },
+      { label: 'Rate halves', imageKey: 'isobutyl alcohol', correct: false },
+    ],
+    explanation: 'In SN1 reactions, the rate‑determining step is the formation of the carbocation when the leaving group departs.  The rate depends only on the concentration of the substrate.  Doubling the alcohol concentration doubles the number of molecules that can form carbocations per unit time, so the rate doubles.  Changes in nucleophile concentration (HBr) do not affect the rate.'
+  },
+  // 12. Doubling HBr concentration in an SN1 reaction
+  {
+    text: 'For the same reaction ((CH₃)₂CHCH₂OH + HBr), if the concentration of HBr is doubled while the alcohol concentration remains constant, what happens to the rate?',
+    options: [
+      { label: 'Rate stays the same', imageKey: 'isobutyl alcohol', correct: true },
+      { label: 'Rate doubles', imageKey: 'isobutyl alcohol', correct: false },
+      { label: 'Rate triples', imageKey: 'isobutyl alcohol', correct: false },
+      { label: 'Rate halves', imageKey: 'isobutyl alcohol', correct: false },
+    ],
+    explanation: 'The nucleophile does not appear in the rate‑determining step of an SN1 reaction.  HBr provides the nucleophile (bromide) after the carbocation forms, so its concentration does not affect the rate.  Therefore doubling the concentration of HBr does not change how fast the reaction proceeds.'
+  },
+  // 13. SN1 mechanism leading to racemization
+  {
+    text: 'Which of the following reactions proceeds via an SN1 mechanism and will racemize a chiral center?',
+    options: [
+      { label: '2‑chlorobutane + H₂O → 2‑butanol + HCl', imageKey: '2-chlorobutane', correct: true },
+      { label: 'Ethyl bromide + NaOH → ethanol + NaBr', imageKey: 'ethyl bromide', correct: false },
+      { label: 'tert‑butyl chloride + ethanol → tert‑butyl ethyl ether + HCl', imageKey: 'tert-butyl chloride', correct: false },
+      { label: 'Propyl bromide + HS⁻ → propyl thiol + Br⁻', imageKey: 'propyl bromide', correct: false },
+    ],
+    explanation: 'SN1 reactions form a planar carbocation intermediate.  When a chiral secondary substrate like 2‑chlorobutane loses chloride, the carbocation can be attacked by water from either side, giving a racemic mixture of 2‑butanol.  Primary halides like ethyl or propyl bromide react via SN2, which inverts configuration.  Tertiary halides like tert‑butyl chloride react via SN1 but do not have a stereocenter in the product.'
+  },
+  // 14. Statement about carbocation stability
+  {
+    text: 'Which of the following statements about carbocation stability is true?',
+    options: [
+      { label: 'Primary carbocations are more stable than secondary carbocations.', imageKey: 'ethyl cation', correct: false },
+      { label: 'Secondary carbocations are more stable than tertiary carbocations.', imageKey: 'isopropyl cation', correct: false },
+      { label: 'Allylic carbocations are more stable than tertiary carbocations.', imageKey: 'allylic cation', correct: true },
+      { label: 'Methyl carbocations are among the most stable carbocations.', imageKey: 'ethyl cation', correct: false },
+    ],
+    explanation: 'Carbocations become more stable as they are substituted by alkyl groups and when the positive charge can be delocalized by resonance.  Tertiary carbocations are stabilized by three alkyl groups.  Allylic carbocations have the positive charge adjacent to a double bond, allowing resonance stabilization that makes them even more stable than simple tertiary carbocations.  Primary and methyl carbocations are least stable.'
+  },
+  // 15. Substrate forming the most stable carbocation
+  {
+    text: 'For the following pair of substrates, which one forms a more stable carbocation upon loss of the leaving group?',
+    options: [
+      { label: 'Chloromethylcyclohexane', imageKey: 'chloromethylcyclohexane', correct: false },
+      { label: 'tert‑butyl chloride', imageKey: 'tert-butyl chloride', correct: true },
+      { label: 'Benzyl chloride', imageKey: 'benzyl chloride', correct: false },
+      { label: 'Neopentyl chloride', imageKey: 'neopentyl chloride', correct: false },
+    ],
+    explanation: 'Tert‑butyl chloride forms a tertiary carbocation when chloride departs.  Tertiary carbocations are stabilized by three alkyl groups.  Chloromethylcyclohexane gives a primary carbocation, benzyl chloride forms a benzylic cation stabilized by resonance, and neopentyl chloride forms a primary cation adjacent to a bulky group.  Among these, the tertiary carbocation from tert‑butyl chloride is the most stable.'
+  },
+  // 16. Racemization of (S)‑2‑iodopentane in NaI/DMSO
+  {
+    text: 'When (S)‑2‑iodopentane is dissolved in sodium iodide in DMSO, it racemizes.  Why does this happen?',
+    options: [
+      { label: 'The iodide ion acts as a strong base, causing elimination.', imageKey: '2-bromopentane', correct: false },
+      { label: 'The reaction proceeds via an SN2 mechanism.', imageKey: '2-bromopentane', correct: false },
+      { label: 'The reaction proceeds via an SN1 mechanism with iodide attack on both faces.', imageKey: '2-bromopentane', correct: true },
+      { label: 'Iodine radicals cause homolytic substitution.', imageKey: '2-bromopentane', correct: false },
+    ],
+    explanation: 'In DMSO, iodide is both a good nucleophile and an excellent leaving group.  The iodide leaves to form a planar carbocation, and then another iodide ion can attack from either side of this flat intermediate.  Attack from both faces produces both (R) and (S) configurations in equal amounts.  This SN1 mechanism causes racemization.  An SN2 pathway would give inversion but not racemization.'
+  },
+  // 17. Racemization of (R)‑2‑butanol with HBr
+  {
+    text: 'When the optically active alcohol (R)‑2‑butanol is treated with HBr, a racemic mixture of 2‑bromobutane is obtained.  What is the main reason?',
+    options: [
+      { label: 'The reaction proceeds via an SN2 mechanism with inversion.', imageKey: '2-butanol', correct: false },
+      { label: 'The reaction proceeds via an SN1 mechanism with carbocation rearrangement.', imageKey: '2-butanol', correct: false },
+      { label: 'The reaction proceeds via an SN1 mechanism, and the carbocation is attacked from either side by bromide.', imageKey: '2-butanol', correct: true },
+      { label: 'The reaction proceeds via an E2 elimination to form an alkene.', imageKey: '2-butanol', correct: false },
+    ],
+    explanation: 'Protonation of the alcohol converts the hydroxyl group into a better leaving group (water).  Loss of water forms a planar secondary carbocation.  Bromide ion then attacks this carbocation from either face, giving both enantiomers in equal amounts.  Because attack occurs on both sides of the planar intermediate, the product is a racemic mixture rather than inverted or retained stereochemistry.'
+  },
+  // 18. Walden inversion example
+  {
+    text: 'Which reaction below illustrates a Walden inversion (inversion of configuration at a chiral center)?',
+    options: [
+      { label: 'SN1 reaction of tert‑butyl chloride with water.', imageKey: 'tert-butyl chloride', correct: false },
+      { label: 'SN2 reaction of (S)‑2‑bromobutane with CN⁻ to give (R)‑2‑butanenitrile.', imageKey: '2-bromobutane', correct: true },
+      { label: 'Formation of tert‑butyl carbocation followed by rearrangement.', imageKey: 'tert-butyl cation', correct: false },
+      { label: 'Dehydration of 2‑propanol to give propene.', imageKey: 'propanol', correct: false },
+    ],
+    explanation: 'A Walden inversion occurs in SN2 reactions because the nucleophile attacks from the back side, flipping the stereochemistry.  When (S)‑2‑bromobutane is attacked by CN⁻ in a single step, the product is (R)‑2‑butanenitrile.  SN1 reactions produce racemization, and elimination reactions do not invert stereochemistry.'
+  },
+  // 19. First step in converting an alcohol with HBr
+  {
+    text: 'Consider the following reaction: CH₃CH₂CH₂OH + HBr → CH₃CH₂CH₂Br + H₂O.  What is the first step in the mechanism?',
+    options: [
+      { label: 'The bromide ion attacks the carbon bearing the OH group.', imageKey: 'propanol', correct: false },
+      { label: 'The hydroxyl group leaves, forming a carbocation.', imageKey: 'propanol', correct: false },
+      { label: 'The alcohol is protonated by HBr to form water, a better leaving group.', imageKey: 'propanol', correct: true },
+      { label: 'A hydride shift occurs to form a more stable carbocation.', imageKey: 'propanol', correct: false },
+    ],
+    explanation: 'Alcohols are poor leaving groups.  In acid, the first step is protonation of the hydroxyl group by HBr.  The protonated alcohol becomes water, which is a good leaving group.  Only after protonation does water depart to form a carbocation.  Bromide attacks in a later step.  No hydride shift is needed because the intermediate carbocation is already primary.'
+  },
+  // 20. Rearrangement in 3‑methyl‑2‑butanol substitution
+  {
+    text: 'When 3‑methyl‑2‑butanol is treated with concentrated HBr, a rearranged product, 2‑bromopentane, is formed.  Why does rearrangement occur?',
+    options: [
+      { label: 'The initial carbocation is primary and rearranges to a more stable secondary carbocation.', imageKey: '3-methyl-2-butanol', correct: true },
+      { label: 'The nucleophile is too weak and causes rearrangement.', imageKey: '3-methyl-2-butanol', correct: false },
+      { label: 'Protonation occurs at the wrong site.', imageKey: '3-methyl-2-butanol', correct: false },
+      { label: 'Radical bromination competes with substitution.', imageKey: '3-methyl-2-butanol', correct: false },
+    ],
+    explanation: 'Protonation of 3‑methyl‑2‑butanol allows water to leave and forms a primary carbocation.  Primary carbocations are very unstable.  A hydride shift from the adjacent carbon moves the positive charge to form a secondary carbocation, which is more stable.  Bromide then attacks this secondary carbocation, giving the rearranged product.  Weak nucleophiles or radical pathways are not the cause.'
+  },
+  // 21. Least stable carbocation
+  {
+    text: 'Which of the following carbocations is least stable?',
+    options: [
+      { label: 'tert‑butyl cation', imageKey: 'tert-butyl cation', correct: false },
+      { label: 'isopropyl cation', imageKey: 'isopropyl cation', correct: false },
+      { label: 'ethyl cation', imageKey: 'ethyl cation', correct: true },
+      { label: 'allylic cation', imageKey: 'allylic cation', correct: false },
+    ],
+    explanation: 'Carbocation stability increases with greater alkyl substitution and with resonance stabilization.  The ethyl cation is a primary carbocation with no resonance stabilization and is therefore the least stable.  Isopropyl and tert‑butyl cations are secondary and tertiary, respectively, and allylic cations are stabilized by resonance.'
+  },
+  // 22. Ordering carbocation stability
+  {
+    text: 'Identify the correct order of carbocation stability from least to most stable.',
+    options: [
+      { label: 'methyl < allyl < secondary < tertiary', imageKey: 'allylic cation', correct: false },
+      { label: 'methyl < secondary < allyl < tertiary', imageKey: 'allylic cation', correct: false },
+      { label: 'methyl < secondary < tertiary < allyl', imageKey: 'allylic cation', correct: false },
+      { label: 'methyl < secondary < allyl < benzyl', imageKey: 'allylic cation', correct: true },
+    ],
+    explanation: 'Carbocations become more stable as they gain alkyl substituents or resonance stabilization.  The methyl cation is the least stable.  Secondary carbocations are more stable than methyl but less stable than allylic carbocations.  Benzylic carbocations are even more stabilized by resonance across the aromatic ring.  Therefore the order methyl < secondary < allyl < benzyl is correct.'
+  },
+  // 23. Structure of ethyl acetate
+  {
+    text: 'Which of the following structures represents ethyl acetate?',
+    options: [
+      { label: 'Acetate ion', imageKey: 'acetate', correct: false },
+      { label: 'Ethyl acetate (CH₃CH₂COOCH₃)', imageKey: 'ethyl acetate', correct: true },
+      { label: 'Acetic acid (CH₃COOH)', imageKey: 'acetic acid', correct: false },
+      { label: 'Ethanol (CH₃CH₂OH)', imageKey: 'ethanol', correct: false },
+    ],
+    explanation: 'Ethyl acetate is an ester formed from acetic acid and ethanol.  Its structure has a carbonyl carbon double‑bonded to oxygen and single‑bonded to another oxygen, which is attached to an ethyl group.  Option 2 shows CH₃CH₂COOCH₃, matching this description.  Option 1 is the acetate anion, option 3 is acetic acid, and option 4 is ethanol.'
+  },
+  // 24. Stereochemical outcome of an SN2 reaction
+  {
+    text: 'In the following SN2 reaction, what is the configuration of the product?  (S)‑2‑bromobutane + NaCN → ?',
+    options: [
+      { label: '(S)‑2‑butanenitrile', imageKey: 'product_S_2_butanenitrile', correct: false },
+      { label: '(R)‑2‑butanenitrile', imageKey: 'product_R_2_butanenitrile', correct: true },
+      { label: 'Racemic 2‑butanenitrile', imageKey: 'racemic_butanenitrile', correct: false },
+      { label: 'Retention of configuration', imageKey: 'product_S_2_butanenitrile', correct: false },
+    ],
+    explanation: 'SN2 reactions involve backside attack.  The nucleophile replaces the leaving group with inversion of stereochemistry.  Starting from (S)‑2‑bromobutane, attack by CN⁻ produces (R)‑2‑butanenitrile.  A racemic mixture or retention would be expected in SN1 or other mechanisms, not SN2.'
+  },
+  // 25. Reagent set for SN1 conversion of an alcohol to an alkyl chloride
+  {
+    text: 'Which pair of reagents will convert an alcohol to an alkyl chloride via an SN1 mechanism?',
+    options: [
+      { label: 'SOCl₂ and pyridine', imageKey: 'tert-butanol', correct: false },
+      { label: 'HCl and ZnCl₂ (Lucas reagent)', imageKey: 'tert-butanol', correct: true },
+      { label: 'NaBr and H₂SO₄', imageKey: 'tert-butanol', correct: false },
+      { label: 'PCl₃ in ether', imageKey: 'tert-butanol', correct: false },
+    ],
+    explanation: 'Tertiary and some secondary alcohols can be converted to alkyl chlorides via an SN1 mechanism using concentrated HCl in the presence of ZnCl₂, known as the Lucas reagent.  This acid–catalyst combination forms a carbocation that is then attacked by chloride.  Other reagents such as SOCl₂ and PCl₃ operate via SN2 and do not involve carbocations.'
+  },
+  // 26. Role of ZnCl₂ in the Lucas test
+  {
+    text: 'What is the role of ZnCl₂ in the Lucas test for alcohols?',
+    options: [
+      { label: 'It acts as a base to deprotonate the alcohol.', imageKey: 'tert-butanol', correct: false },
+      { label: 'It coordinates with the oxygen of the alcohol to make a better leaving group.', imageKey: 'tert-butanol', correct: true },
+      { label: 'It donates a chloride ion.', imageKey: 'tert-butanol', correct: false },
+      { label: 'It prevents carbocation rearrangement.', imageKey: 'tert-butanol', correct: false },
+    ],
+    explanation: 'ZnCl₂ is a Lewis acid.  It binds to the lone pair on the oxygen of the alcohol, increasing the positive character of the carbon and making the departing group more stable.  This promotes ionization to form a carbocation.  ZnCl₂ does not act as a base or as a chloride source and cannot stop rearrangements.'
+  },
+  // 27. Mechanism and product of tert‑butyl iodide with sodium methoxide
+  {
+    text: 'In the reaction of 2‑iodo‑2‑methylpropane with sodium methoxide (CH₃ONa), which mechanism occurs and what is the product?',
+    options: [
+      { label: 'SN2 to give tert‑butyl methoxy ether', imageKey: 'tert-butyl iodide', correct: false },
+      { label: 'SN1 to give tert‑butyl methoxy ether', imageKey: 'tert-butyl iodide', correct: true },
+      { label: 'E2 to give isobutene', imageKey: 'tert-butyl iodide', correct: false },
+      { label: 'Radical substitution to give tert‑butyl methyl ether', imageKey: 'tert-butyl iodide', correct: false },
+    ],
+    explanation: '2‑Iodo‑2‑methylpropane is a tertiary halide, so it cannot undergo SN2 because of steric hindrance.  The iodide first leaves to form a tertiary carbocation.  Methoxide then attacks this carbocation, yielding tert‑butyl methoxy ether.  An E2 elimination would require a strong base and result in an alkene, and radical pathways are not typical under these conditions.'
+  },
+  // 28. Identifying an SN1 substrate that rearranges
+  {
+    text: 'Which of the following compounds will undergo rearrangement in an SN1 reaction?',
+    options: [
+      { label: '3‑bromo‑3‑methylhexane', imageKey: '3-bromo-3-methylhexane', correct: true },
+      { label: '1‑bromobutane', imageKey: '1-bromobutane', correct: false },
+      { label: 'benzyl bromide', imageKey: 'benzyl bromide', correct: false },
+      { label: 'allyl chloride', imageKey: 'allyl chloride', correct: false },
+    ],
+    explanation: 'When the leaving group departs from 3‑bromo‑3‑methylhexane, a secondary carbocation forms.  This carbocation can rearrange via a hydride shift to form a more stable tertiary carbocation.  Primary bromides like 1‑bromobutane undergo SN2 without carbocations, and benzylic and allylic halides are already stabilized by resonance and do not rearrange.'
+  },
+  // 29. Product of an SN2 reaction with sodium hydrosulfide
+  {
+    text: 'What is the product of the following SN2 reaction?  CH₃CH₂CH₂Br + NaSH → ?',
+    options: [
+      { label: 'CH₃CH₂CH₂SH', imageKey: 'propanethiol', correct: true },
+      { label: 'CH₃CH₂CH₂OH', imageKey: 'propanol', correct: false },
+      { label: 'CH₃CH₂CH₂SNa', imageKey: 'propanethiol', correct: false },
+      { label: 'CH₃CH₂CH₂Br (no reaction)', imageKey: 'propyl bromide', correct: false },
+    ],
+    explanation: 'HS⁻ is a strong nucleophile.  It attacks the carbon bearing the bromine in a backside SN2 reaction, displacing the bromide and forming propanethiol.  Sodium ions balance charge but are spectators.  There are no side products besides NaBr.'
+  },
+  // 30. Product of tert‑butyl chloride with ethanol
+  {
+    text: 'In the reaction of 2‑chloro‑2‑methylpropane with ethanol, which product is formed?',
+    options: [
+      { label: 'tert‑butyl ethyl ether', imageKey: 'tert-butyl ethyl ether', correct: true },
+      { label: 'tert‑butyl chloride', imageKey: 'tert-butyl chloride', correct: false },
+      { label: 'tert‑butyl alcohol', imageKey: 'tert-butanol', correct: false },
+      { label: 'ethene', imageKey: 'ethene', correct: false },
+    ],
+    explanation: '2‑Chloro‑2‑methylpropane (tert‑butyl chloride) forms a tertiary carbocation when chloride leaves.  In ethanol, the solvent acts as a nucleophile, attacking the carbocation to give tert‑butyl ethyl ether after deprotonation.  The other options do not match the substitution product formed in these conditions.'
+  },
+  // 31. Two‑step transformation using cyanide and hydrolysis
+  {
+    text: 'Consider the following sequence: CH₃CH₂Br → CH₃CH₂CN → CH₃CH₂CO₂H.  Which reagents complete this two‑step transformation?',
+    options: [
+      { label: 'NaCN, then H₃O⁺/heat', imageKey: 'ethyl bromide', correct: true },
+      { label: 'NaOH, then H₂SO₄', imageKey: 'ethyl bromide', correct: false },
+      { label: 'KOH, then KMnO₄', imageKey: 'ethyl bromide', correct: false },
+      { label: 'NaCN, then LiAlH₄', imageKey: 'ethyl bromide', correct: false },
+    ],
+    explanation: 'Bromide is replaced by cyanide in an SN2 reaction with NaCN to give a nitrile.  Hydrolysis of the nitrile under acidic conditions (H₃O⁺ and heat) converts it into a carboxylic acid.  The other reagent sequences either form alcohols or amines rather than the desired acid.'
+  },
+  // 32. Product of thionyl chloride substitution
+  {
+    text: 'Identify the product of the following reaction: CH₃CH₂CH₂OH + thionyl chloride (SOCl₂) → ?',
+    options: [
+      { label: 'CH₃CH₂CH₂Cl', imageKey: 'propyl chloride', correct: true },
+      { label: 'CH₃CH₂CH₂SH', imageKey: 'propanethiol', correct: false },
+      { label: 'CH₃CH₂CH₂Br', imageKey: 'propyl bromide', correct: false },
+      { label: 'CH₃CH₂CH₂O–SOCl', imageKey: 'propyl chloride', correct: false },
+    ],
+    explanation: 'Thionyl chloride converts alcohols to alkyl chlorides via an SN2‑like mechanism.  Propanol becomes propyl chloride.  There is no bromination, and the intermediate sulfite collapses to produce the chloride and SO₂ gas.'
+  },
+  // 33. Dehydration of tert‑butyl alcohol
+  {
+    text: 'Which reagent best converts tert‑butyl alcohol to isobutene (2‑methylpropene)?',
+    options: [
+      { label: 'H₂SO₄/heat', imageKey: 'tert-butanol', correct: true },
+      { label: 'HBr', imageKey: 'tert-butanol', correct: false },
+      { label: 'NaOH', imageKey: 'tert-butanol', correct: false },
+      { label: 'PCC (pyridinium chlorochromate)', imageKey: 'tert-butanol', correct: false },
+    ],
+    explanation: 'To remove water from a tertiary alcohol and form an alkene, a strong acid and heat are required.  Concentrated sulfuric acid protonates the alcohol, the leaving group departs, and elimination occurs to give the alkene.  HBr would substitute the hydroxyl with bromide, NaOH is not strong enough to dehydrate tert‑butyl alcohol, and PCC is an oxidizing agent.'
+  },
+  // 34. E2 elimination with t‑BuOK
+  {
+    text: 'Which alkyl halide will most readily undergo E2 elimination with a strong base like potassium tert‑butoxide (t‑BuOK)?',
+    options: [
+      { label: '2‑bromobutane', imageKey: '2-bromobutane', correct: false },
+      { label: '1‑bromobutane', imageKey: '1-bromobutane', correct: false },
+      { label: 'tert‑butyl bromide', imageKey: 'tert-butyl bromide', correct: true },
+      { label: 'benzyl bromide', imageKey: 'benzyl bromide', correct: false },
+    ],
+    explanation: 'E2 elimination is favored for tertiary halides with strong bases.  tert‑Butyl bromide is tertiary, so a bulky base like t‑BuOK will remove a proton and eliminate the bromide, giving isobutene.  Primary and secondary bromides prefer substitution unless the base is very strong and hindered.  Benzyl bromide undergoes SN2 because the benzyl position is stabilized by resonance.'
+  },
+  // 35. SN1 reactivity of benzyl vs. ethyl bromide
+  {
+    text: 'Consider the pair: ethyl bromide vs. benzyl bromide.  Which one reacts faster in an SN1 reaction?',
+    options: [
+      { label: 'Ethyl bromide', imageKey: 'ethyl bromide', correct: false },
+      { label: 'Benzyl bromide', imageKey: 'benzyl bromide', correct: true },
+      { label: 'They react at the same rate', imageKey: 'ethyl bromide', correct: false },
+      { label: 'Neither undergoes SN1', imageKey: 'ethyl bromide', correct: false },
+    ],
+    explanation: 'Benzyl bromide forms a benzylic carbocation when the leaving group departs.  This carbocation is highly stabilized by resonance with the aromatic ring, making the SN1 reaction very fast.  Ethyl bromide is primary and normally reacts via SN2.  Therefore benzyl bromide reacts much faster in an SN1 mechanism.'
+  },
+  // 36. Converting 1‑bromobutane to 1‑butanol
+  {
+    text: 'Which sequence of reagents converts 1‑bromobutane to 1‑butanol?',
+    options: [
+      { label: 'H₂O/heat', imageKey: '1-bromobutane', correct: false },
+      { label: 'NaOH in water', imageKey: '1-bromobutane', correct: true },
+      { label: 'NaOMe in methanol', imageKey: '1-bromobutane', correct: false },
+      { label: 'HBr', imageKey: '1-bromobutane', correct: false },
+    ],
+    explanation: '1‑Bromobutane is a primary halide.  The hydroxide ion is a strong nucleophile and will replace bromide in an SN2 reaction to form 1‑butanol.  Water is too weak a nucleophile, methoxide would give butyl methyl ether, and adding HBr would not convert a bromide into an alcohol.'
+  },
+  // 37. Converting isopropyl bromide to isopropyl cyanide
+  {
+    text: 'Which sequence of reagents converts isopropyl bromide to isopropyl cyanide (2‑methylpropionitrile)?',
+    options: [
+      { label: 'NaCN (in DMSO)', imageKey: 'isopropyl chloride', correct: true },
+      { label: 'NaCN followed by H₃O⁺/heat', imageKey: 'isopropyl chloride', correct: false },
+      { label: 'KCN in ethanol', imageKey: 'isopropyl chloride', correct: false },
+      { label: 'NaCN then LiAlH₄', imageKey: 'isopropyl chloride', correct: false },
+    ],
+    explanation: 'Isopropyl bromide is secondary.  Using NaCN in a polar aprotic solvent like DMSO promotes an SN2 reaction to give the nitrile in one step.  Hydrolysis (Option 2) would convert the nitrile to a carboxylic acid.  Ethanol is a protic solvent and slows down SN2 reactions.  LiAlH₄ would reduce the nitrile to an amine, not the desired nitrile.'
+  },
+  // 38. Effect of doubling base concentration in an E2 reaction
+  {
+    text: 'Which statement best describes the effect of doubling base concentration in an E2 reaction?',
+    options: [
+      { label: 'The rate doubles because the reaction is second‑order overall.', imageKey: '2-bromobutane', correct: true },
+      { label: 'The rate halves because more base causes inhibition.', imageKey: '2-bromobutane', correct: false },
+      { label: 'The rate stays the same because the base does not participate in the rate law.', imageKey: '2-bromobutane', correct: false },
+      { label: 'The reaction shifts to SN1.', imageKey: '2-bromobutane', correct: false },
+    ],
+    explanation: 'E2 eliminations are bimolecular.  The rate depends on both the concentration of the substrate and the concentration of the base.  Therefore doubling the base concentration doubles the rate.  There is no inhibition at higher base concentration under normal conditions.'
+  },
+  // 39. Reaction of a tosylate with iodide
+  {
+    text: 'A primary alkyl tosylate (R–OTs) reacts with sodium iodide in acetone to give which product?',
+    options: [
+      { label: 'R–I', imageKey: 'n-butyl iodide', correct: true },
+      { label: 'R–Cl', imageKey: 'n-butyl iodide', correct: false },
+      { label: 'R–SH', imageKey: 'n-butyl iodide', correct: false },
+      { label: 'R–OH', imageKey: 'n-butyl iodide', correct: false },
+    ],
+    explanation: 'Tosylates are excellent leaving groups.  In acetone, iodide is a strong nucleophile and will displace the tosylate group in an SN2 reaction, forming an alkyl iodide.  Chloride and hydroxide ions are not present, and hydrosulfide would be needed to form R–SH.'
+  },
+  // 40. Racemization of (R)‑2‑pentanol in acid
+  {
+    text: 'When (R)‑2‑pentanol is treated with dilute sulfuric acid, it racemizes.  Which mechanism explains this?',
+    options: [
+      { label: 'SN1 reaction forming a planar carbocation attacked by water from either side', imageKey: '2-bromopentane', correct: true },
+      { label: 'SN2 reaction with inversion of configuration', imageKey: '2-bromopentane', correct: false },
+      { label: 'Radical substitution via homolysis of the C–O bond', imageKey: '2-bromopentane', correct: false },
+      { label: 'E2 elimination followed by hydration', imageKey: '2-bromopentane', correct: false },
+    ],
+    explanation: 'In acidic solution, the alcohol is protonated and water leaves to form a secondary carbocation.  This carbocation is flat and can be attacked from either face by water, giving both enantiomers.  An SN2 pathway would give only inversion, and radicals or eliminations are not relevant here.'
+  },
+  // 41. Converting cyclohexanol to bromocyclohexane
+  {
+    text: 'Which reagent best converts cyclohexanol to bromocyclohexane without rearrangement?',
+    options: [
+      { label: 'HBr', imageKey: 'cyclohexanol', correct: false },
+      { label: 'PBr₃', imageKey: 'cyclohexanol', correct: true },
+      { label: 'Br₂/FeBr₃', imageKey: 'cyclohexanol', correct: false },
+      { label: 'NaBr/H₂SO₄', imageKey: 'cyclohexanol', correct: false },
+    ],
+    explanation: 'Phosphorus tribromide (PBr₃) converts primary and secondary alcohols to alkyl bromides via an SN2 mechanism.  This process avoids carbocations and rearrangements.  Direct HBr or H₂SO₄ generate a carbocation (SN1) and can lead to rearrangement.  Br₂/FeBr₃ is used for aromatic bromination, not for alcohols.'
+  },
+  // 42. Reactivity of neopentyl bromide with cyanide
+  {
+    text: 'A neopentyl bromide (CH₃C(CH₃)₂CH₂CH₂Br) is reacted with NaCN.  What is the major product?',
+    options: [
+      { label: 'Neopentyl cyanide (nitrile)', imageKey: 'neopentyl bromide', correct: false },
+      { label: 'No reaction (extremely slow SN2)', imageKey: 'neopentyl bromide', correct: true },
+      { label: 'Rearranged nitrile', imageKey: 'neopentyl bromide', correct: false },
+      { label: 'Isobutene', imageKey: 'neopentyl bromide', correct: false },
+    ],
+    explanation: 'Neopentyl bromide is a primary bromide but has a very bulky substituent adjacent to the leaving group.  This steric hindrance makes SN2 reactions extremely slow.  SN1 reactions are also disfavored because a primary carbocation would need to form.  As a result, little to no substitution occurs with NaCN under typical conditions.'
+  },
+  // 43. Fastest nucleophile for benzyl chloride SN2
+  {
+    text: 'Which nucleophile will react fastest with benzyl chloride in an SN2 reaction?',
+    options: [
+      { label: 'H₂O', imageKey: 'water', correct: false },
+      { label: 'MeOH', imageKey: 'methanol', correct: false },
+      { label: 'I⁻', imageKey: 'benzyl chloride', correct: true },
+      { label: 'NH₃', imageKey: 'ammonia', correct: false },
+    ],
+    explanation: 'Iodide ion (I⁻) is a large, polarizable nucleophile and is very reactive in SN2 reactions.  Benzyl chloride is a primary benzylic halide that readily undergoes SN2.  Water and methanol are weak nucleophiles, and ammonia is moderate.  Therefore I⁻ gives the fastest substitution.'
+  },
+  // 44. Reaction proceeding through a tosylate intermediate
+  {
+    text: 'Which of the following reactions proceeds through an intermediate tosylate?',
+    options: [
+      { label: 'ROH → ROCl using SOCl₂', imageKey: 'methanol', correct: false },
+      { label: 'ROH → R–TsO using TsCl/pyridine', imageKey: 'methanol', correct: true },
+      { label: 'ROH → RBr using HBr', imageKey: 'methanol', correct: false },
+      { label: 'ROH → R–OH (no change)', imageKey: 'methanol', correct: false },
+    ],
+    explanation: 'Tosyl chloride (TsCl) reacts with an alcohol in the presence of a base like pyridine to give a tosylate ester (R–OTs).  This intermediate retains the stereochemistry at carbon and can be displaced by a nucleophile.  SOCl₂ and HBr convert alcohols directly to halides without forming tosylates.'
+  },
+  // 45. Substrate that does not react via SN1
+  {
+    text: 'Which of the following substrates will not react via an SN1 mechanism under typical conditions?',
+    options: [
+      { label: 'tert‑butyl bromide', imageKey: 'tert-butyl bromide', correct: false },
+      { label: '2‑bromo‑2‑methylpropane', imageKey: 'tert-butyl bromide', correct: false },
+      { label: 'benzyl bromide', imageKey: 'benzyl bromide', correct: false },
+      { label: '1‑bromopropane', imageKey: '1-bromobutane', correct: true },
+    ],
+    explanation: 'Primary alkyl halides like 1‑bromopropane do not form stable carbocations and therefore do not undergo SN1 reactions.  Tertiary halides (such as tert‑butyl bromide and 2‑bromo‑2‑methylpropane) form stable carbocations, and benzylic halides are stabilized by resonance, making them good SN1 substrates.'
+  },
+  // 46. Reagent for converting a tosylate to a thiol
+  {
+    text: 'For the transformation CH₃CH₂OTs → CH₃CH₂SH, identify the reagent you would use.',
+    options: [
+      { label: 'NaSH', imageKey: 'propanethiol', correct: true },
+      { label: 'NaI', imageKey: 'propanethiol', correct: false },
+      { label: 'H₂O', imageKey: 'propanethiol', correct: false },
+      { label: 'NaOH', imageKey: 'propanethiol', correct: false },
+    ],
+    explanation: 'A tosylate (OTs) is an excellent leaving group.  To replace it with an SH group, you need a sulfur nucleophile.  Sodium hydrosulfide (NaSH) provides HS⁻, which displaces the tosylate in an SN2 reaction to give the thiol.  Iodide or hydroxide would produce different products, and water would not efficiently substitute the tosylate.'
+  },
+  // 47. Steps in a tert‑butyl chloride SN1 reaction
+  {
+    text: 'In the SN1 reaction tert‑butyl chloride + methanol → tert‑butyl methyl ether + HCl, how many elementary steps are involved?',
+    options: [
+      { label: 'Two steps', imageKey: 'tert-butyl chloride', correct: false },
+      { label: 'Three steps', imageKey: 'tert-butyl chloride', correct: true },
+      { label: 'Four steps', imageKey: 'tert-butyl chloride', correct: false },
+      { label: 'One step', imageKey: 'tert-butyl chloride', correct: false },
+    ],
+    explanation: 'SN1 mechanisms involve more than one step.  First, the halide leaves to form a carbocation.  Second, the nucleophile (methanol) attacks the carbocation.  Third, deprotonation of the oxonium ion yields the ether.  These three discrete steps make up the mechanism.'
+  },
+  // 48. Converting an alkyl iodide to a primary alcohol
+  {
+    text: 'Which reagent set converts an alkyl iodide to a primary alcohol?',
+    options: [
+      { label: 'NaOH in H₂O', imageKey: 'n-butyl iodide', correct: true },
+      { label: 'HBr', imageKey: 'n-butyl iodide', correct: false },
+      { label: 'NaI in acetone', imageKey: 'n-butyl iodide', correct: false },
+      { label: 'PBr₃', imageKey: 'n-butyl iodide', correct: false },
+    ],
+    explanation: 'A strong nucleophile like hydroxide ion will attack a primary alkyl iodide in an SN2 reaction and replace the iodide with a hydroxyl group.  HBr would convert it to a bromide, NaI in acetone swaps halogens, and PBr₃ converts alcohols to bromides rather than the reverse.'
+  },
+  // 49. Fastest E2 elimination with NaOEt
+  {
+    text: 'Which substrate will react fastest with NaOEt (sodium ethoxide) in ethanol via an E2 elimination?',
+    options: [
+      { label: '3‑bromopropene', imageKey: 'allyl bromide', correct: false },
+      { label: '2‑bromopropane', imageKey: '2-bromopropane', correct: false },
+      { label: '2‑bromo‑2‑methylpropane (tert‑butyl bromide)', imageKey: 'tert-butyl bromide', correct: true },
+      { label: '1‑bromopropane', imageKey: 'propyl bromide', correct: false },
+    ],
+    explanation: 'Strong bases like sodium ethoxide remove a proton to form an alkene.  A tertiary halide such as tert‑butyl bromide eliminates most readily because the resulting alkene is highly substituted and the substitution pathway is hindered.  Secondary and primary halides undergo elimination more slowly.  Allylic bromides can also undergo substitution rather than elimination.'
+  },
+  // 50. Strongest nucleophile in aqueous solution
+  {
+    text: 'Which of the following is the strongest nucleophile in aqueous solution?',
+    options: [
+      { label: 'HO⁻', imageKey: 'hydroxide', correct: true },
+      { label: 'H₂O', imageKey: 'water', correct: false },
+      { label: 'H₂S', imageKey: 'hydrogen sulfide', correct: false },
+      { label: 'HS⁻', imageKey: 'thiolate', correct: false },
+    ],
+    explanation: 'In water, hydroxide ions are strong bases and remain relatively free from solvation compared to larger anions.  They readily attack electrophilic carbons.  HS⁻ and H₂S are more heavily solvated and therefore less nucleophilic than HO⁻ in water.  Water itself is a very weak nucleophile.  Thus HO⁻ is the strongest nucleophile in aqueous solution.'
   }
 ];
 
