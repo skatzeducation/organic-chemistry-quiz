@@ -52,6 +52,11 @@ const imageData = {
   'tert-butyric acid': 'tert_butyric_acid.png',
   'benzyl chloride': 'benzyl_chloride.png',
   'chloromethylcyclohexane': 'chloromethylcyclohexane.png'
+  ,
+  // Additional structures used in the bond‑line quiz
+  '1-chlorobutane': '1_chlorobutane.png',
+  '3_methyl_2_butanol': '3_methyl_2_butanol.png',
+  'ethanol': 'ethanol.png'
 };
 
 // Array of 20 practice questions.  Each question includes the condensed
@@ -121,7 +126,10 @@ const questions = [
     explanation: '3‑Methylpentane has a five‑carbon chain with a branch on the third carbon.  Its bond‑line drawing looks like a “zig‑zag” chain with a small branch in the middle.  2‑Methylpentane has the branch closer to the end, 2,2‑dimethylbutane has two branches on the second carbon, and hexane has six carbons and no branches.  Therefore the middle‑branched chain represents 3‑methylpentane.'
   },
   {
-    text: 'Which bond‑line structure corresponds to 2,3‑dimethylbutane?',
+    // For this question we provide a Lewis‑style diagram of the condensed
+    // structure so students can interpret the bonding without relying on
+    // nomenclature.  The img tag refers to a PNG in the repository.
+    text: 'Which bond‑line structure corresponds to the following structure?<br><img src="2_3_dimethylbutane_lewis.png" alt="Lewis structure of 2,3‑dimethylbutane" style="max-width:200px; display:block; margin:1em auto 0;">',
     options: [
       { label: '2,3‑dimethylbutane', imageKey: '2,3-dimethylbutane', correct: true },
       { label: '2,2‑dimethylbutane', imageKey: '2,2-dimethylbutane', correct: false },
@@ -285,16 +293,24 @@ function initQuiz() {
 // Load the current question and render its text, progress indicator and options.
 function loadQuestion() {
   const q = questions[currentQuestionIndex];
-  questionEl.textContent = q.text;
+  // Use innerHTML so question text can contain images (e.g., Lewis diagrams)
+  questionEl.innerHTML = q.text;
   progressEl.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
   optionsEl.innerHTML = '';
   feedbackEl.innerHTML = '';
   nextBtn.style.display = 'none';
-  // Render each answer choice as a clickable div with an image and label.
-  q.options.forEach((opt, idx) => {
+  // Shuffle options so the correct answer is not always first
+  const shuffled = q.options
+    .map(opt => Object.assign({}, opt))
+    .sort(() => Math.random() - 0.5);
+  // Render each answer choice as a clickable div containing only the image.  Labels are omitted
+  // to prevent students from identifying the correct answer by name.  The correct flag is stored
+  // in a data attribute for later highlighting.
+  shuffled.forEach((opt) => {
     const optDiv = document.createElement('div');
     optDiv.className = 'option';
-    optDiv.innerHTML = `<img src="${imageData[opt.imageKey]}" alt="${opt.label}"><div>${opt.label}</div>`;
+    optDiv.dataset.correct = opt.correct;
+    optDiv.innerHTML = `<img src="${imageData[opt.imageKey]}" alt="">`;
     optDiv.addEventListener('click', () => selectOption(opt));
     optionsEl.appendChild(optDiv);
   });
@@ -315,14 +331,14 @@ function selectOption(opt) {
   const callToCommunity = '  If you have any questions about this problem, please post them in the Community tab of our Skool community at <a href="https://www.skool.com/premedportal" target="_blank">premedportal</a>.';
   feedbackEl.innerHTML = q.explanation + callToCommunity;
   feedbackEl.style.display = 'block';
-  // Highlight selected and non‑selected options
+  // Highlight selected and non‑selected options.  Use the data‑correct attribute
+  // assigned in loadQuestion() rather than matching on label text.  Disable
+  // further clicks by adding the disabled class to all option elements.
   Array.from(optionsEl.children).forEach((child) => {
     child.classList.add('disabled');
-    const labelText = child.querySelector('div').textContent.trim();
-    const matchedOpt = q.options.find(o => o.label === labelText);
-    if (matchedOpt && matchedOpt.correct) {
+    if (child.dataset.correct === 'true') {
       child.classList.add('correct');
-    } else if (matchedOpt) {
+    } else {
       child.classList.add('incorrect');
     }
   });
