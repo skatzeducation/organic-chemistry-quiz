@@ -5,9 +5,12 @@
 // Mapping of internal image keys to the relative file names in the `images` directory.
 const imageData = {
   // Cropped question images from problem 2.4
-  'crop_a': 'crop_a.png',
-  'crop_b': 'crop_b.png',
-  'crop_c': 'crop_c.png',
+  // For the first three questions (2.4), use custom RDKit depictions rather than the
+  // cropped textbook images. These depictions include all atoms and
+  // hydrogens without any labels (a), (b), (c) visible on the page.
+  'crop_a': 'question_a_rdkit.png',
+  'crop_b': 'question_b_rdkit.png',
+  'crop_c': 'question_c_rdkit.png',
   // Bond‑line structure images (correct answers and decoys)
   'crop_a_bondline': 'crop_a_bondline.png',
   'crop_b_bondline': 'crop_b_bondline.png',
