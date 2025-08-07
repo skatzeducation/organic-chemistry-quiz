@@ -1,3 +1,7 @@
+/* Root stylesheet used by all quizzes.  This file is a copy of
+   `quiz_site/style.css` and includes additional rules for reading
+   bond‑line quizzes. */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -131,4 +135,34 @@ h1 {
 
 .next-btn:hover {
   background: #0056b3;
+}
+
+/* Buttons used in the reading bond‑line quiz. These resemble the
+   earlier `.option` divs but are actual `<button>` elements. The
+   class names `.option-btn`, `.correct`, and `.incorrect` control
+   appearance. */
+.option-btn {
+  flex: 1 1 calc(50% - 15px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+  font-size: 0.95em;
+}
+
+.option-btn.correct {
+  background: #e6ffe6;
+  border-color: #66cc66;
+}
+
+.option-btn.incorrect {
+  background: #ffe6e6;
+  border-color: #cc6666;
+}
+
+.option-btn:hover:not(:disabled) {
+  background: #f0f8ff;
 }
