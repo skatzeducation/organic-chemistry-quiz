@@ -42,7 +42,7 @@ function formatFormula(formula) {
 const questions = [
   {
     // 2.4 (a) – display the cropped Lewis structure and ask for its bond‑line representation
-    text: 'Look at the Lewis structure shown below. Which bond‑line structure corresponds to this molecule? <br><img src="images/' + imageData['crop_a'] + '" alt="structure" style="height:150px; display:block; margin:0 auto;">',
+    text: 'Look at the Lewis structure shown below. Which bond‑line structure corresponds to this molecule? <br><img src="' + imageData['crop_a'] + '" alt="structure" style="height:150px; display:block; margin:0 auto;">',
     options: [
       { imageKey: 'crop_a_bondline', correct: true },
       { imageKey: 'question_b', correct: false },
@@ -53,7 +53,7 @@ const questions = [
   },
   {
     // 2.4 (b)
-    text: 'Look at the Lewis structure shown below. Which bond‑line structure corresponds to this molecule? <br><img src="images/' + imageData['crop_b'] + '" alt="structure" style="height:150px; display:block; margin:0 auto;">',
+    text: 'Look at the Lewis structure shown below. Which bond‑line structure corresponds to this molecule? <br><img src="' + imageData['crop_b'] + '" alt="structure" style="height:150px; display:block; margin:0 auto;">',
     options: [
       { imageKey: 'crop_b_bondline', correct: true },
       { imageKey: 'question_a', correct: false },
@@ -64,7 +64,7 @@ const questions = [
   },
   {
     // 2.4 (c)
-    text: 'Look at the Lewis structure shown below. Which bond‑line structure corresponds to this molecule? <br><img src="images/' + imageData['crop_c'] + '" alt="structure" style="height:150px; display:block; margin:0 auto;">',
+    text: 'Look at the Lewis structure shown below. Which bond‑line structure corresponds to this molecule? <br><img src="' + imageData['crop_c'] + '" alt="structure" style="height:150px; display:block; margin:0 auto;">',
     options: [
       { imageKey: 'crop_c_bondline', correct: true },
       { imageKey: 'question_d', correct: false },
@@ -293,7 +293,8 @@ function loadQuestion() {
     btn.classList.add('option');
     btn.dataset.correct = opt.correct;
     const img = document.createElement('img');
-    img.src = 'images/' + imageData[opt.imageKey];
+      // Use relative file name directly since images are stored in the repository root
+      img.src = imageData[opt.imageKey];
     img.alt = 'option';
     btn.appendChild(img);
     btn.addEventListener('click', () => selectOption(btn, q));
