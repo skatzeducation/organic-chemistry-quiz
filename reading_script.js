@@ -20,203 +20,204 @@ const rawData = [
   // strings. When adding more questions, follow the same shape.
   {
     image: 'q1.png',
-    correct: '3 carbons; H counts: 3, 2, 3',
+    // Simplified answer: list total hydrogens instead of per‑carbon counts
+    correct: '3 carbons, 8 hydrogens',
     decoys: [
-      '2 carbons; H counts: 3, 2, 3',
-      '3 carbons; H counts: 2, 3, 3',
-      '3 carbons; H counts: 3, 2, 3' // reversed list same as correct
+      '2 carbons, 8 hydrogens',
+      '3 carbons, 7 hydrogens',
+      '3 carbons, 9 hydrogens'
     ],
-    explanation: 'This molecule has three carbon atoms arranged in a straight chain. The terminal carbons each have three hydrogens, while the middle carbon has two hydrogens.'
+    explanation: 'This molecule has three carbon atoms arranged in a straight chain. The terminal carbons each have three hydrogens, while the middle carbon has two hydrogens. Summing them gives eight hydrogens total.'
   },
   {
     image: 'q2.png',
-    correct: '4 carbons; H counts: 3, 2, 2, 3',
+    correct: '4 carbons, 10 hydrogens',
     decoys: [
-      '5 carbons; H counts: 3, 2, 2, 3',
-      '4 carbons; H counts: 2, 3, 2, 3',
-      '4 carbons; H counts: 3, 2, 2, 3'
+      '5 carbons, 10 hydrogens',
+      '4 carbons, 9 hydrogens',
+      '4 carbons, 11 hydrogens'
     ],
-    explanation: 'Butane contains four carbon atoms in a row. Each terminal carbon has three hydrogens, while the two internal carbons each carry two hydrogens.'
+    explanation: 'Butane contains four carbon atoms in a row. Each terminal carbon has three hydrogens, while the two internal carbons each carry two hydrogens. Altogether there are ten hydrogens attached to carbon.'
   },
   {
     image: 'q3.png',
-    correct: '4 carbons; H counts: 3, 1, 3, 3',
+    correct: '4 carbons, 10 hydrogens',
     decoys: [
-      '3 carbons; H counts: 3, 1, 3, 3',
-      '4 carbons; H counts: 2, 2, 3, 3',
-      '4 carbons; H counts: 3, 1, 3, 3'
+      '3 carbons, 10 hydrogens',
+      '4 carbons, 9 hydrogens',
+      '4 carbons, 11 hydrogens'
     ],
-    explanation: 'This branched molecule (isobutane) has four carbon atoms. The central carbon is bonded to three other carbons and therefore carries only one hydrogen; the three methyl groups each carry three hydrogens.'
+    explanation: 'Isobutane (2‑methylpropane) has four carbon atoms. The central carbon is bonded to three other carbons and has one hydrogen; the three methyl groups each have three hydrogens, giving ten hydrogens in total.'
   },
   {
     image: 'q4.png',
-    correct: '5 carbons; H counts: 3, 2, 1, 2, 3',
+    correct: '5 carbons, 12 hydrogens',
     decoys: [
-      '4 carbons; H counts: 3, 2, 1, 2, 3',
-      '5 carbons; H counts: 2, 3, 1, 2, 3',
-      '5 carbons; H counts: 3, 2, 1, 2, 3'
+      '4 carbons, 12 hydrogens',
+      '5 carbons, 11 hydrogens',
+      '5 carbons, 13 hydrogens'
     ],
-    explanation: '2‑Methylbutane has five carbon atoms. Starting from one end, the hydrogens decrease to one on the branching carbon, then increase again toward the other end of the chain.'
+    explanation: '2‑Methylbutane has five carbon atoms and a total of twelve hydrogens attached to carbon. The hydrogens decrease to one on the branching carbon and increase again toward the other end of the chain.'
   },
   {
     image: 'q5.png',
-    correct: '6 carbons; H counts: 2, 2, 2, 2, 2, 2',
+    correct: '6 carbons, 12 hydrogens',
     decoys: [
-      '5 carbons; H counts: 2, 2, 2, 2, 2, 2',
-      '6 carbons; H counts: 3, 2, 2, 2, 2, 3',
-      '6 carbons; H counts: 2, 2, 2, 2, 2, 2'
+      '5 carbons, 12 hydrogens',
+      '6 carbons, 14 hydrogens',
+      '6 carbons, 10 hydrogens'
     ],
-    explanation: 'Cyclohexane is a ring of six carbons. Each carbon in the ring is bonded to two other carbons and therefore has two hydrogens.'
+    explanation: 'Cyclohexane is a ring of six carbons. Each carbon in the ring is bonded to two other carbons and therefore has two hydrogens, giving a total of twelve hydrogens on the ring.'
   },
   {
     image: 'q6.png',
-    correct: '5 carbons; H counts: 2, 2, 2, 2, 2',
+    correct: '5 carbons, 10 hydrogens',
     decoys: [
-      '4 carbons; H counts: 2, 2, 2, 2, 2',
-      '5 carbons; H counts: 3, 2, 2, 2, 3',
-      '5 carbons; H counts: 2, 2, 2, 2, 2'
+      '4 carbons, 10 hydrogens',
+      '5 carbons, 12 hydrogens',
+      '5 carbons, 8 hydrogens'
     ],
-    explanation: 'Cyclopentane consists of five carbons in a ring. Each carbon is bonded to two neighboring carbons and therefore bears two hydrogens.'
+    explanation: 'Cyclopentane consists of five carbons in a ring. Each carbon is bonded to two neighboring carbons and therefore bears two hydrogens, giving ten hydrogens total.'
   },
   {
     image: 'q7.png',
-    correct: '6 carbons; H counts: 3, 2, 2, 2, 2, 2',
+    correct: '6 carbons, 12 hydrogens',
     decoys: [
-      '7 carbons; H counts: 3, 2, 2, 2, 2, 2',
-      '6 carbons; H counts: 2, 3, 2, 2, 2, 2',
-      '6 carbons; H counts: 3, 2, 2, 2, 2, 2'
+      '7 carbons, 12 hydrogens',
+      '6 carbons, 14 hydrogens',
+      '6 carbons, 11 hydrogens'
     ],
-    explanation: '1‑Hexene has six carbon atoms. The double‑bonded carbons each have fewer hydrogens than a saturated carbon: one end has three hydrogens and the internal carbons have two each.'
+    explanation: '1‑Hexene has six carbon atoms. The double‑bonded carbons each have fewer hydrogens than a saturated carbon: one end has two hydrogens and the other has one. In total there are twelve hydrogens attached to carbon.'
   },
   {
     image: 'q8.png',
-    correct: '4 carbons; H counts: 3, 1, 1, 3',
+    correct: '4 carbons, 6 hydrogens',
     decoys: [
-      '3 carbons; H counts: 3, 1, 1, 3',
-      '4 carbons; H counts: 2, 2, 1, 3',
-      '4 carbons; H counts: 3, 1, 1, 3'
+      '3 carbons, 6 hydrogens',
+      '4 carbons, 8 hydrogens',
+      '4 carbons, 5 hydrogens'
     ],
-    explanation: '2‑Butyne has four carbon atoms. The two sp‑hybridized carbons in the triple bond each have one hydrogen, while the terminal carbons have three hydrogens.'
+    explanation: '2‑Butyne has four carbon atoms. The two sp‑hybridized carbons in the triple bond each have one hydrogen, while the terminal carbons have three hydrogens, giving six hydrogens in total.'
   },
   {
     image: 'q9.png',
-    correct: '6 carbons; H counts: 1, 1, 1, 1, 1, 1',
+    correct: '6 carbons, 6 hydrogens',
     decoys: [
-      '5 carbons; H counts: 1, 1, 1, 1, 1, 1',
-      '6 carbons; H counts: 2, 1, 1, 1, 1, 2',
-      '6 carbons; H counts: 1, 1, 1, 1, 1, 1'
+      '5 carbons, 6 hydrogens',
+      '6 carbons, 12 hydrogens',
+      '6 carbons, 8 hydrogens'
     ],
-    explanation: 'Benzene has six carbons arranged in a ring with alternating double bonds. Each carbon is bonded to two neighboring carbons and has just one hydrogen.'
+    explanation: 'Benzene has six carbons arranged in a ring with alternating double bonds. Each carbon is bonded to two neighboring carbons and has just one hydrogen, for a total of six hydrogens.'
   },
   {
     image: 'q10.png',
-    correct: '4 carbons; H counts: 3, 1, 3, 3',
+    correct: '4 carbons, 9 hydrogens',
     decoys: [
-      '3 carbons; H counts: 3, 1, 3, 3',
-      '4 carbons; H counts: 2, 2, 3, 3',
-      '4 carbons; H counts: 3, 1, 3, 3'
+      '3 carbons, 9 hydrogens',
+      '4 carbons, 8 hydrogens',
+      '4 carbons, 10 hydrogens'
     ],
-    explanation: 'Tert‑butyl alcohol has four carbons. The central carbon is bonded to three other carbons and an oxygen, leaving it with just one hydrogen; each methyl group has three hydrogens.'
+    explanation: 'This molecule is tert‑butyl alcohol. It contains four carbon atoms. Each of the three methyl groups contributes three hydrogens, while the central quaternary carbon has no hydrogens, giving a total of nine hydrogens attached to carbon.'
   },
   {
     image: 'q11.png',
-    correct: '3 carbons; H counts: 3, 1, 3',
+    correct: '3 carbons, 6 hydrogens',
     decoys: [
-      '4 carbons; H counts: 3, 1, 3',
-      '3 carbons; H counts: 2, 2, 3',
-      '3 carbons; H counts: 3, 1, 3'
+      '4 carbons, 6 hydrogens',
+      '3 carbons, 7 hydrogens',
+      '3 carbons, 5 hydrogens'
     ],
-    explanation: 'Acetone has three carbons. The carbonyl carbon has one hydrogen, while the two methyl carbons each have three hydrogens.'
+    explanation: 'Acetone contains three carbon atoms. The two methyl carbons each have three hydrogens, while the carbonyl carbon has none. Adding the hydrogens on carbon gives six in total.'
   },
   {
     image: 'q12.png',
-    correct: '2 carbons; H counts: 3, 2',
+    correct: '2 carbons, 5 hydrogens',
     decoys: [
-      '3 carbons; H counts: 3, 2',
-      '2 carbons; H counts: 2, 3',
-      '2 carbons; H counts: 3, 2'
+      '3 carbons, 5 hydrogens',
+      '2 carbons, 4 hydrogens',
+      '2 carbons, 6 hydrogens'
     ],
-    explanation: 'Ethanol has two carbons. The methyl carbon bears three hydrogens, while the methylene carbon attached to the hydroxyl has two hydrogens.'
+    explanation: 'Ethanol contains two carbon atoms. The terminal methyl carbon has three hydrogens and the methylene carbon attached to the hydroxyl group has two, giving five hydrogens on carbon.'
   },
   {
     image: 'q13.png',
-    correct: '1 carbon; H counts: 3',
+    correct: '1 carbon, 3 hydrogens',
     decoys: [
-      '2 carbons; H counts: 3',
-      '1 carbon; H counts: 2',
-      '1 carbon; H counts: 3'
+      '2 carbons, 3 hydrogens',
+      '1 carbon, 2 hydrogens',
+      '1 carbon, 4 hydrogens'
     ],
-    explanation: 'Methylamine contains only one carbon atom, which carries three hydrogens. The nitrogen bears the remaining hydrogens.'
+    explanation: 'Methylamine consists of one carbon atom bonded to a nitrogen. The methyl carbon carries three hydrogens; the additional hydrogens are attached to nitrogen.'
   },
   {
     image: 'q14.png',
-    correct: '6 carbons; H counts: 2, 2, 2, 2, 2, 1',
+    correct: '6 carbons, 10 hydrogens',
     decoys: [
-      '5 carbons; H counts: 2, 2, 2, 2, 2, 1',
-      '6 carbons; H counts: 3, 2, 2, 2, 2, 1',
-      '6 carbons; H counts: 2, 2, 2, 2, 2, 1'
+      '5 carbons, 10 hydrogens',
+      '6 carbons, 9 hydrogens',
+      '6 carbons, 12 hydrogens'
     ],
-    explanation: 'Cyclohexanone has six carbons. The carbonyl carbon (sp2) is bonded to one hydrogen; the other five ring carbons each have two hydrogens.'
+    explanation: 'Cyclohexanone contains six carbon atoms. Five of the ring carbons are CH₂ groups (each bearing two hydrogens), while the carbonyl carbon has no hydrogens. This gives a total of ten hydrogens attached to carbon.'
   },
   {
     image: 'q15.png',
-    correct: '5 carbons; H counts: 3, 1, 3, 3, 3',
+    correct: '5 carbons, 12 hydrogens',
     decoys: [
-      '4 carbons; H counts: 3, 1, 3, 3, 3',
-      '5 carbons; H counts: 2, 2, 3, 3, 3',
-      '5 carbons; H counts: 3, 1, 3, 3, 3'
+      '4 carbons, 12 hydrogens',
+      '5 carbons, 11 hydrogens',
+      '5 carbons, 13 hydrogens'
     ],
-    explanation: 'Neopentane contains five carbons. The central quaternary carbon has no hydrogens, but each of the four terminal methyl carbons has three hydrogens.'
+    explanation: 'Neopentane (2,2‑dimethylpropane) has five carbon atoms. The central carbon is bonded to four other carbons and therefore has no hydrogens; each of the four terminal methyl carbons bears three hydrogens, giving twelve hydrogens attached to carbon.'
   },
   {
     image: 'q16.png',
-    correct: '2 carbons; H counts: 3, 1',
+    correct: '2 carbons, 3 hydrogens',
     decoys: [
-      '3 carbons; H counts: 3, 1',
-      '2 carbons; H counts: 2, 2',
-      '2 carbons; H counts: 3, 1'
+      '3 carbons, 3 hydrogens',
+      '2 carbons, 2 hydrogens',
+      '2 carbons, 4 hydrogens'
     ],
-    explanation: 'Acetic acid has two carbon atoms. The methyl carbon has three hydrogens, while the carboxyl carbon is attached to one hydrogen (in the OH) and no other hydrogens.'
+    explanation: 'Acetic acid has two carbon atoms. The methyl carbon bears three hydrogens, while the carboxyl carbon has no hydrogens because its valences are satisfied by bonds to oxygen and carbon.'
   },
   {
     image: 'q17.png',
-    correct: '6 carbons; H counts: 3, 2, 2, 1, 2, 3',
+    correct: '6 carbons, 14 hydrogens',
     decoys: [
-      '5 carbons; H counts: 3, 2, 2, 1, 2, 3',
-      '6 carbons; H counts: 2, 3, 2, 1, 2, 3',
-      '6 carbons; H counts: 3, 2, 2, 1, 2, 3'
+      '5 carbons, 14 hydrogens',
+      '6 carbons, 13 hydrogens',
+      '6 carbons, 15 hydrogens'
     ],
-    explanation: '3‑Methylpentane has six carbons. Counting from one end, the hydrogens follow the pattern 3, 2, 2, 1 (on the branching carbon), then 2, 3.'
+    explanation: '3‑Methylpentane has six carbon atoms in its chain. Being a saturated alkane with one methyl branch, it has fourteen hydrogens attached to carbon atoms (C₆H₁₄).'
   },
   {
     image: 'q18.png',
-    correct: '5 carbons; H counts: 3, 1, 3, 3, 3',
+    correct: '4 carbons, 9 hydrogens',
     decoys: [
-      '4 carbons; H counts: 3, 1, 3, 3, 3',
-      '5 carbons; H counts: 2, 2, 3, 3, 3',
-      '5 carbons; H counts: 3, 1, 3, 3, 3'
+      '3 carbons, 9 hydrogens',
+      '4 carbons, 8 hydrogens',
+      '4 carbons, 10 hydrogens'
     ],
-    explanation: 'Tert‑butyl chloride consists of five carbons. The central carbon is bonded to four groups and has no hydrogens; each of the three methyl carbons has three hydrogens, and the fourth carbon in the chain has one hydrogen.'
+    explanation: 'Tert‑butyl chloride has four carbon atoms. Each of the three methyl groups contributes three hydrogens, while the central quaternary carbon bonded to chlorine has none, giving nine hydrogens in total.'
   },
   {
     image: 'q19.png',
-    correct: '3 carbons; H counts: 2, 2, 2',
+    correct: '3 carbons, 5 hydrogens',
     decoys: [
-      '4 carbons; H counts: 2, 2, 2',
-      '3 carbons; H counts: 3, 1, 2',
-      '3 carbons; H counts: 2, 2, 2'
+      '2 carbons, 5 hydrogens',
+      '3 carbons, 4 hydrogens',
+      '3 carbons, 6 hydrogens'
     ],
-    explanation: 'Allyl alcohol has three carbon atoms. The carbon–carbon double bond means the first two carbons each have two hydrogens, and the third carbon (attached to OH) has two hydrogens.'
+    explanation: 'Allyl alcohol (CH₂=CH–CH₂OH) contains three carbon atoms. The terminal alkene carbon has two hydrogens, the internal alkene carbon has one, and the carbon attached to the hydroxyl group has two, for a total of five hydrogens.'
   },
   {
     image: 'q20.png',
-    correct: '4 carbons; H counts: 3, 2, 1, 0',
+    correct: '3 carbons, 5 hydrogens',
     decoys: [
-      '3 carbons; H counts: 3, 2, 1, 0',
-      '4 carbons; H counts: 2, 3, 1, 0',
-      '4 carbons; H counts: 3, 2, 1, 0'
+      '2 carbons, 5 hydrogens',
+      '3 carbons, 4 hydrogens',
+      '3 carbons, 6 hydrogens'
     ],
-    explanation: 'Propionitrile has four carbon atoms when counting the nitrile carbon. The terminal methyl carbon has three hydrogens, the next carbon has two, the nitrile carbon has one, and the carbon of the nitrile group itself has none.'
+    explanation: 'Propionitrile (ethyl cyanide) contains three carbon atoms when counting the alkyl chain; the nitrile carbon has no hydrogens. The methyl carbon has three hydrogens and the methylene carbon has two, giving five hydrogens attached to carbon.'
   }
 ];
 
