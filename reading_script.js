@@ -19,7 +19,7 @@ const rawData = [
   // defines the relative image path and the correct and decoy answer
   // strings. When adding more questions, follow the same shape.
   {
-    image: 'images/q1.png',
+    image: 'q1.png',
     correct: '3 carbons; H counts: 3, 2, 3',
     decoys: [
       '2 carbons; H counts: 3, 2, 3',
@@ -29,7 +29,7 @@ const rawData = [
     explanation: 'This molecule has three carbon atoms arranged in a straight chain. The terminal carbons each have three hydrogens, while the middle carbon has two hydrogens.'
   },
   {
-    image: 'images/q2.png',
+    image: 'q2.png',
     correct: '4 carbons; H counts: 3, 2, 2, 3',
     decoys: [
       '5 carbons; H counts: 3, 2, 2, 3',
@@ -39,7 +39,7 @@ const rawData = [
     explanation: 'Butane contains four carbon atoms in a row. Each terminal carbon has three hydrogens, while the two internal carbons each carry two hydrogens.'
   },
   {
-    image: 'images/q3.png',
+    image: 'q3.png',
     correct: '4 carbons; H counts: 3, 1, 3, 3',
     decoys: [
       '3 carbons; H counts: 3, 1, 3, 3',
@@ -49,7 +49,7 @@ const rawData = [
     explanation: 'This branched molecule (isobutane) has four carbon atoms. The central carbon is bonded to three other carbons and therefore carries only one hydrogen; the three methyl groups each carry three hydrogens.'
   },
   {
-    image: 'images/q4.png',
+    image: 'q4.png',
     correct: '5 carbons; H counts: 3, 2, 1, 2, 3',
     decoys: [
       '4 carbons; H counts: 3, 2, 1, 2, 3',
@@ -59,7 +59,7 @@ const rawData = [
     explanation: '2‑Methylbutane has five carbon atoms. Starting from one end, the hydrogens decrease to one on the branching carbon, then increase again toward the other end of the chain.'
   },
   {
-    image: 'images/q5.png',
+    image: 'q5.png',
     correct: '6 carbons; H counts: 2, 2, 2, 2, 2, 2',
     decoys: [
       '5 carbons; H counts: 2, 2, 2, 2, 2, 2',
@@ -69,7 +69,7 @@ const rawData = [
     explanation: 'Cyclohexane is a ring of six carbons. Each carbon in the ring is bonded to two other carbons and therefore has two hydrogens.'
   },
   {
-    image: 'images/q6.png',
+    image: 'q6.png',
     correct: '5 carbons; H counts: 2, 2, 2, 2, 2',
     decoys: [
       '4 carbons; H counts: 2, 2, 2, 2, 2',
@@ -79,7 +79,7 @@ const rawData = [
     explanation: 'Cyclopentane consists of five carbons in a ring. Each carbon is bonded to two neighboring carbons and therefore bears two hydrogens.'
   },
   {
-    image: 'images/q7.png',
+    image: 'q7.png',
     correct: '6 carbons; H counts: 3, 2, 2, 2, 2, 2',
     decoys: [
       '7 carbons; H counts: 3, 2, 2, 2, 2, 2',
@@ -89,7 +89,7 @@ const rawData = [
     explanation: '1‑Hexene has six carbon atoms. The double‑bonded carbons each have fewer hydrogens than a saturated carbon: one end has three hydrogens and the internal carbons have two each.'
   },
   {
-    image: 'images/q8.png',
+    image: 'q8.png',
     correct: '4 carbons; H counts: 3, 1, 1, 3',
     decoys: [
       '3 carbons; H counts: 3, 1, 1, 3',
@@ -99,7 +99,7 @@ const rawData = [
     explanation: '2‑Butyne has four carbon atoms. The two sp‑hybridized carbons in the triple bond each have one hydrogen, while the terminal carbons have three hydrogens.'
   },
   {
-    image: 'images/q9.png',
+    image: 'q9.png',
     correct: '6 carbons; H counts: 1, 1, 1, 1, 1, 1',
     decoys: [
       '5 carbons; H counts: 1, 1, 1, 1, 1, 1',
@@ -109,7 +109,7 @@ const rawData = [
     explanation: 'Benzene has six carbons arranged in a ring with alternating double bonds. Each carbon is bonded to two neighboring carbons and has just one hydrogen.'
   },
   {
-    image: 'images/q10.png',
+    image: 'q10.png',
     correct: '4 carbons; H counts: 3, 1, 3, 3',
     decoys: [
       '3 carbons; H counts: 3, 1, 3, 3',
@@ -119,7 +119,7 @@ const rawData = [
     explanation: 'Tert‑butyl alcohol has four carbons. The central carbon is bonded to three other carbons and an oxygen, leaving it with just one hydrogen; each methyl group has three hydrogens.'
   },
   {
-    image: 'images/q11.png',
+    image: 'q11.png',
     correct: '3 carbons; H counts: 3, 1, 3',
     decoys: [
       '4 carbons; H counts: 3, 1, 3',
@@ -129,7 +129,7 @@ const rawData = [
     explanation: 'Acetone has three carbons. The carbonyl carbon has one hydrogen, while the two methyl carbons each have three hydrogens.'
   },
   {
-    image: 'images/q12.png',
+    image: 'q12.png',
     correct: '2 carbons; H counts: 3, 2',
     decoys: [
       '3 carbons; H counts: 3, 2',
@@ -139,7 +139,7 @@ const rawData = [
     explanation: 'Ethanol has two carbons. The methyl carbon bears three hydrogens, while the methylene carbon attached to the hydroxyl has two hydrogens.'
   },
   {
-    image: 'images/q13.png',
+    image: 'q13.png',
     correct: '1 carbon; H counts: 3',
     decoys: [
       '2 carbons; H counts: 3',
@@ -149,7 +149,7 @@ const rawData = [
     explanation: 'Methylamine contains only one carbon atom, which carries three hydrogens. The nitrogen bears the remaining hydrogens.'
   },
   {
-    image: 'images/q14.png',
+    image: 'q14.png',
     correct: '6 carbons; H counts: 2, 2, 2, 2, 2, 1',
     decoys: [
       '5 carbons; H counts: 2, 2, 2, 2, 2, 1',
@@ -159,7 +159,7 @@ const rawData = [
     explanation: 'Cyclohexanone has six carbons. The carbonyl carbon (sp2) is bonded to one hydrogen; the other five ring carbons each have two hydrogens.'
   },
   {
-    image: 'images/q15.png',
+    image: 'q15.png',
     correct: '5 carbons; H counts: 3, 1, 3, 3, 3',
     decoys: [
       '4 carbons; H counts: 3, 1, 3, 3, 3',
@@ -169,7 +169,7 @@ const rawData = [
     explanation: 'Neopentane contains five carbons. The central quaternary carbon has no hydrogens, but each of the four terminal methyl carbons has three hydrogens.'
   },
   {
-    image: 'images/q16.png',
+    image: 'q16.png',
     correct: '2 carbons; H counts: 3, 1',
     decoys: [
       '3 carbons; H counts: 3, 1',
@@ -179,7 +179,7 @@ const rawData = [
     explanation: 'Acetic acid has two carbon atoms. The methyl carbon has three hydrogens, while the carboxyl carbon is attached to one hydrogen (in the OH) and no other hydrogens.'
   },
   {
-    image: 'images/q17.png',
+    image: 'q17.png',
     correct: '6 carbons; H counts: 3, 2, 2, 1, 2, 3',
     decoys: [
       '5 carbons; H counts: 3, 2, 2, 1, 2, 3',
@@ -189,7 +189,7 @@ const rawData = [
     explanation: '3‑Methylpentane has six carbons. Counting from one end, the hydrogens follow the pattern 3, 2, 2, 1 (on the branching carbon), then 2, 3.'
   },
   {
-    image: 'images/q18.png',
+    image: 'q18.png',
     correct: '5 carbons; H counts: 3, 1, 3, 3, 3',
     decoys: [
       '4 carbons; H counts: 3, 1, 3, 3, 3',
@@ -199,7 +199,7 @@ const rawData = [
     explanation: 'Tert‑butyl chloride consists of five carbons. The central carbon is bonded to four groups and has no hydrogens; each of the three methyl carbons has three hydrogens, and the fourth carbon in the chain has one hydrogen.'
   },
   {
-    image: 'images/q19.png',
+    image: 'q19.png',
     correct: '3 carbons; H counts: 2, 2, 2',
     decoys: [
       '4 carbons; H counts: 2, 2, 2',
@@ -209,7 +209,7 @@ const rawData = [
     explanation: 'Allyl alcohol has three carbon atoms. The carbon–carbon double bond means the first two carbons each have two hydrogens, and the third carbon (attached to OH) has two hydrogens.'
   },
   {
-    image: 'images/q20.png',
+    image: 'q20.png',
     correct: '4 carbons; H counts: 3, 2, 1, 0',
     decoys: [
       '3 carbons; H counts: 3, 2, 1, 0',
